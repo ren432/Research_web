@@ -1,0 +1,348 @@
+
+/* ============Data Left============= */
+
+.container_record{
+    border: 2px solid rgb(36, 36, 61);
+    border-radius: 5px;
+    background-color: #040132df;
+    height: 380px;
+    width: 88%;
+    padding: none;
+    align-items: start;
+    margin-top: 10px;
+}
+.column{
+    display: flex;
+}
+.live_camera{
+    border: 2px rgb(154, 27, 27) solid;
+    height: 280px;
+    width: 40rem;
+    margin-top: 10px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Wrapp_container_data{
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+.Camera_content{
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.location{
+    border: 2px rgba(48, 47, 47) solid;
+    background: linear-gradient(
+        90deg,
+        rgba(17, 38, 91, 0.95)
+
+    );
+    width: 280px;
+    height: 35px;
+    text-align: start;
+    padding-left: 20px;
+}
+textarea{
+    resize: none;
+    max-height: 130px;
+    max-width: 500px;
+    height: 240px;
+    width: 100%;
+    background-color: rgb(17, 19, 71);
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 5px;
+    color: white;
+    border-color: rgba(48, 47, 47);
+    border-color: rgba(48, 47, 47);
+}
+.row_data{
+    margin-left: 20px;
+        
+}
+.row_data, .data{
+    margin-bottom: 10px;
+}
+.high_risk{
+    margin-top: 10px;
+        
+}
+.tags{
+    font-weight: 600;
+    padding: 8px;
+    margin-right: 10px;
+}
+.data2{
+    border: 2px red solid;
+    border-radius: 5px;
+    background-color: rgba(179, 11, 11, 0.205);
+    color: rgb(253, 0, 0);
+}
+.data1{
+    border: 2px rgb(0, 195, 255) solid;
+    border-radius: 5px;
+    background-color: rgba(12, 24, 189, 0.37);
+    color: rgb(0, 253, 253);
+}
+
+
+
+
+.recent_data{
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid rgb(36, 36, 61);
+    width: 100%;
+    height: 190px;
+    padding: 15px 15px;
+}
+.container_RecentData{
+    display: flex;
+    width: 88%;
+}
+
+table{
+    margin-top: 10px;
+    height:75px;
+    width:100%;
+    min-width:700px;
+    border-collapse:collapse;
+    background:#171853;
+    overflow:hidden;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.25);
+}
+thead{
+    color:rgb(255, 255, 255);
+    font-size: 13px;
+}
+thead th{
+    padding:9px 12px;
+    text-align:left;
+}
+
+tbody{
+    font-size:14px;
+    color:white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+tbody td{
+    padding:10px 12px;
+}
+
+.column_data{
+    display: grid;
+
+
+    grid-template-columns:
+        1fr 260px;
+
+    gap: 15px;
+
+    width: 100%;
+
+    align-items: start;
+}
+
+
+.WaterLevel_Container{
+    border: 3px rgb(0, 255, 136) solid;
+
+}
+.graph_data{
+    border: 3px red solid;
+}
+
+
+
+
+/* ===========boduy======== */
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    font-family: Popping, 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: linear-gradient(
+        135deg,
+        rgba(5,10,25,1) 0%,
+        rgba(8,20,45,1) 50%,
+        rgba(5,10,25,1) 100%
+    );
+    color: rgba(255,255,255,0.95);
+    padding: 9px;
+}
+main{
+    width: 100%;
+    padding: 0;
+    max-width: 1400px;
+    margin: 0;
+}
+/* ===========scroll========= */
+::-webkit-scrollbar {
+    width: 0px; 
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent; 
+}
+
+/* ===============Data top============ */
+.Data_container{
+    display: flex;
+}
+
+.wrap_container{
+    margin: 0;
+    padding: 0;
+}
+.wrap_Container_Data_overview{
+    margin-top: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.wrap_container h3{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.container_normal{
+    background-color: rgb(3, 217, 42);
+    border-radius: 5px;
+    flex: 1;
+    width: 30.9rem;
+    height: 56px;
+    color: white;
+    padding-left: 10px;
+    margin-right: 1rem;
+    border: 2px, solid rgb(47, 255, 68);
+}
+.container_high_risk{
+    background-color: rgba(251, 255, 3, 0.445);
+    border-radius: 5px;
+    flex: 1;
+    width: 30.9rem;
+    height: 56px;
+    color: white;
+    padding-left: 10px;
+    margin-right: 1rem;
+    border: 2px, solid rgba(255, 255, 0, 0.39);
+}
+
+.container_critical{
+    background-color: rgba(213, 15, 8, 0.333);
+    border: 2px, solid red;
+    flex: 1;
+    border-radius: 5px;
+    width: 30.90rem;
+    height: 56px;
+    color: white;
+    padding-left: 10px;
+    margin-right: 1rem;
+}
+
+
+.txt{
+    font-weight: 700;
+}
+.container_percentage{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+.Wrap_record{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrap_Rain_status{
+    background-color: rgba(54, 23, 233, 0.333);
+    border: 2px, solid rgb(40, 43, 245);
+    border-radius: 5px;
+    width: 15.5rem;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.wrap_water_Level{
+    background-color: rgba(54, 23, 233, 0.333);
+    border: 2px, solid rgb(40, 43, 245);
+    border-radius: 5px;
+    width: 15.5rem;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.wrap_Drainage{
+    background-color: rgba(54, 23, 233, 0.333);
+    border: 2px, solid rgb(40, 43, 245);
+    border-radius: 5px;
+    width: 15.5rem;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.wrap_Flood_Status{
+    background-color: rgba(54, 23, 233, 0.333);
+    border: 2px, solid rgb(40, 43, 245);
+    border-radius: 5px;
+    width: 15.5rem;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.symbol{
+    border: 1px solid red;
+    border-radius: 5%;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px;
+    background-color: grey;
+    align-items: center;
+    display: flex;
+}
+
+.imgs{
+    width: 37px;
+    height: 37px;
+    border-radius: 5%;
+    object-fit: cover;
+    display: block;
+    align-items: center;
+    margin: 10px 1px;
+}

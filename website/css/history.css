@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(
+    135deg,
+    #EEF4FA 0%,
+    #E8F0F7 50%,
+    #F7FAFC 100%
+    );
+    padding:40px;
+}
+
+.dashboard{
+    width:130%;
+    max-width:1230px;
+    box-shadow:0 2px 10px rgba(15,23,42,0.05);
+    margin:auto;
+    background: #FFFFFF;
+    padding:25px;
+    border-radius:20px;
+}
+
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.table-header h2{
+    font-size:28px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    text-align:left;
+    padding:15px 10px;
+    background: #FFFFFF;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+td{
+    padding:18px 10px;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.record-img{
+    width:120px;
+    height:70px;
+    object-fit:cover;
+    border-radius:10px;
+}
+.Description{
+    font-size: 10;
+    padding-right: 2% ;
+}
+.location{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+}
+
+.icon{
+    color:#49a6ff;
+    font-size:18px;
+}
+
+.location h4,
+.datetime h4{
+    margin-bottom:5px;
+    font-size:15px;
+}
+
+.location p,
+.datetime p{
+    color:#94a4ba;
+    font-size:13px;
+}
+
+.Status{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.Status{
+    padding:7px 14px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:bold;
+}
+.tag{
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-weight: 750;
+
+}
+.red{
+    background:rgba(255, 0, 76, 0.068);
+    color:#ff4b7d;
+    border: 2px red solid;
+}
+
+.yellow{
+    background:rgba(252, 211, 75, 0.418);
+    color:#ff8800;
+    border: 2px rgb(238, 179, 111) solid;
+}
+
+.green {
+    background:rgba(114, 255, 128, 0.233);
+    color:#0b8508;
+    border: 2px rgb(9, 255, 0) solid;
+
+}
+
+tr:hover{
+    background:rgba(255,255,255,0.03);
+}
+
+.btn{
+    background: #FFFFFF;
+    box-shadow:0px 1px 5px rgba(0, 0, 0, 0.437);
+    border-radius: 5px;
+    height: 35px;
+    width: 40px;
+    border: none;
+    margin-left: 10px;
+}
+.action{
+    display:flex;
+    
+}
+
+
+@media (min-width: 1600px){
+    .dashboard{
+        max-width:1600px;
+    }
+}

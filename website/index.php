@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        html, body{
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+            overflow:hidden;
+        }
+
+        frame{
+            border:none;
+        }
+    </style>
+  </head>
+ <!---format frameset col = "", row= "" -->
+  <frameset cols="230px,*" frameborder="0" border="0">
+
+    <!-- SIDEBAR -->
+    <frame src="pages/sidebar.php" noresize scrolling="no" style="border-right: 1px solid rgb(233, 233, 233);">
+
+    <!-- RIGHT SIDE -->
+    <frameset rows="65px,*" frameborder="0" border="0">
+
+        
+        <frame src="pages/navbar.php"
+               noresize
+               scrolling="no">
+
+        
+        <frame src="pages/dashboard.php"
+               name="content"
+               scrolling="auto">
+
+    </frameset>
+
+</frameset>
+</html>

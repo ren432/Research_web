@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  body{
+    background:#ededed;
+    padding:20px;
+    color:#000;
+  }
+  
+  /* TITLE */
+  
+  .dashboard-title{
+    margin-bottom:25px;
+  }
+  
+  .dashboard-title h1{
+    font-size:35px;
+  }
+  
+  /* CARDS */
+  
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-bottom:25px;
+  }
+  
+  .card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+  }
+  
+  .icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+  }
+  
+  .blue{
+    background:#102c62;
+    color:#4ea1ff;
+  }
+  
+  .red{
+    background:#421a27;
+    color:#ff5f6d;
+  }
+  
+  .water{
+    background:#112a52;
+    color:#58a6ff;
+  }
+  
+  .card-text h2{
+    font-size:40px;
+    margin:5px 0;
+  }
+  .card-text p{
+    font-size:20px;
+    font-weight: 600;
+  }
+  
+  
+  /* CHART SECTION */
+  
+  .charts{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  
+  .chart-box{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
+  }
+  
+  .chart-box h2{
+    margin-bottom:20px;
+  }
+  
+  /* PIE CHART */
+  
+  .pie-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+  }
+  
+  .chart-wrapper{
+    position:relative;
+    width:100%;
+    max-width:500px;
+    height:300px;
+  }
+  
+  .chart-center{
+    position:absolute;
+    top:50%;
+    left:35%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    pointer-events:none;
+  }
+  
+  .chart-center h3{
+    font-size:32px;
+    font-weight:bold;
+  }
+  
+  .chart-center p{
+    font-size:16px;
+  }
+  
+  /* BAR CHART */
+  
+  .bar-chart-container{
+    position:relative;
+    width:95%;
+    height:350px;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media(max-width:900px){
+  
+    .charts{
+      grid-template-columns:1fr;
+    }
+  
+  }
+  

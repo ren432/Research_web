@@ -11,8 +11,49 @@
       <div class="table-header">
         <h2>Historical Records</h2>
       </div>
+       <div class="controls">
 
-      <table>
+        <div class="search-box">
+            <input type="text" placeholder="Search records...">
+        </div>
+
+        <div class="date-filter">
+            <label>From</label>
+            <input type="date">
+
+            <label>To</label>
+            <input type="date">
+        </div>
+
+        <div class="risk-filter">
+            <label>
+                <input type="checkbox" checked>
+                High Risk
+            </label>
+
+            <label>
+                <input type="checkbox" checked>
+                Medium Risk
+            </label>
+
+            <label>
+                <input type="checkbox" checked>
+                Low Risk
+            </label>
+        </div>
+
+        <div class="order-filter">
+            <select>
+                <option>Descending</option>
+                <option>Ascending</option>
+            </select>
+        </div>
+
+    </div>
+
+    <!-- TABLE STARTS HERE -->
+    <table>
+          
         <thead>
           <tr>
             <th>ID</th>
@@ -27,7 +68,7 @@
 
         <tbody>
           <tr>
-            <td>IMG-00045</td>
+            <td>Cam3-01</td>
             <td>
               <img src="../imgs/tabuc_suba2.png" class="record-img" />
             </td>
@@ -68,7 +109,7 @@
 
 
           <tr>
-            <td>IMG-00044</td>
+            <td>Cam1-02</td>
             <td>
               <img src="../imgs/tabuc_suba1.png" class="record-img" />
             </td>
@@ -108,7 +149,7 @@
 
 
           <tr>
-            <td>IMG-00043</td>
+            <td>Cam2-03</td>
 
             <td>
               <img src="../imgs/tabuc_suba2.png" class="record-img" />
@@ -149,7 +190,7 @@
 
 
           <tr>
-            <td>IMG-00043</td>
+            <td>Cam1-04</td>
 
             <td>
               <img src="../imgs/tabuc_suba1.png" class="record-img" />
@@ -191,7 +232,11 @@
           </tr>
           
         </tbody>
-      </table>
+      
+    
+    </table>
+
+    </div>
     </div>
   </body>
 </html>

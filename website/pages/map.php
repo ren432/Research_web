@@ -23,7 +23,7 @@
             <thead>
               <th>Camera</th>
               <th>AREA</th>
-              <th>WATER LEVEL</th>
+              
               <th>STATUS</th>
               <th>TIME&DATE</th>
             </thead>
@@ -31,7 +31,7 @@
             <tbody>
               <td>Camera 1</td>
               <td>Tabuc Suba</td>
-              <td>17cm</td>
+              
               <td class="Status"><span>Normal</span></td>
               <td>05/11/2025</td>
             </tbody>

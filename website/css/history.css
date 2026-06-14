@@ -141,6 +141,80 @@ tr:hover{
     
 }
 
+/* FILTER AREA */
+.controls{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    align-items:center;
+    margin-bottom:25px;
+    padding:15px;
+    background:#f8fafc;
+    border-radius:12px;
+}
+
+/* Search */
+.search-box input{
+    width:260px;
+    height:42px;
+    padding:0 15px;
+    border:1px solid #d6dde8;
+    border-radius:10px;
+    outline:none;
+    font-size:14px;
+}
+
+/* Date */
+.date-filter{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.date-filter label{
+    font-size:14px;
+    font-weight:600;
+}
+
+.date-filter input{
+    height:42px;
+    padding:0 10px;
+    border:1px solid #d6dde8;
+    border-radius:10px;
+}
+
+/* Checkboxes */
+.risk-filter{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.risk-filter label{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* Order */
+.order-filter{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-left:auto;
+}
+
+.order-filter select{
+    height:42px;
+    padding:0 12px;
+    border:1px solid #d6dde8;
+    border-radius:10px;
+    background:#fff;
+    cursor:pointer;
+}
+
 
 @media (min-width: 1600px){
     .dashboard{

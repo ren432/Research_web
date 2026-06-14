@@ -18,7 +18,9 @@ body{
     flex-direction: column;
     display: flex;
     align-items: center;
-    background-color: rgb(95, 55, 2);
+    background: linear-gradient(
+        
+    );
     color: #1E293B;
     backdrop-filter: blur(10px);
 }
@@ -81,7 +83,7 @@ body{
     background: linear-gradient(
         90deg,
         rgba(201, 39, 39, 0.973),
-        rgba(0, 0, 0, 0.938)
+        rgba(177, 54, 54, 0.938)
     );
     color: white;
     font-weight: 700;
@@ -112,7 +114,7 @@ body{
     height: 70px;
     width: 100%;
     position: relative;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
     color: #1E293B;
     backdrop-filter: blur(14px);    
     display: flex;

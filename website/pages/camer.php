@@ -12,7 +12,9 @@
     <div class="Camera">
       <!--main camera-->
       <div class="maincam">
-        <img id="maincam" src="../imgs/fur.jpg" />
+        <img src="http://192.168.50.8:5000/video_feed"
+                      alt="IoT Flood Analytics Stream"
+                      class="camera-feed">
         <div class="Cam-Tittle" id="mainTitle">Main Camera</div>
       </div>
       

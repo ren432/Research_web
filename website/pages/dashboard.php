@@ -1,208 +1,209 @@
-<!DOCTYPE html>
+<?php
+$conn = mysqli_connect("localhost","root","","flood_monitoring");
+
+if(!$conn){
+    die("Connection Failed: " . mysqli_connect_error());
+}
+?>
+
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flood Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- FONTS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  </head>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download" />
-
-    
-</head>
   <body>
-    <!-- main screen -->
-    <main>
-      <!-- main content -->
-      <section class="Dashboard">
-        <div class="wrap_container">
-          <div class="Wrapp_container_data">
+    <main class="dashboard">
+      <!-- TOP GRID -->
+      <section class="top-grid">
+        <!-- LIVE CAMERA -->
+        <div class="card camera-card">
+          <div class="card-header">
+            <h3>Live Camera</h3>
+            <select>
+              <option>Camera 1 - Tabuc Suba</option>
+            </select>
+          </div>
 
-            <div class="right">
-              <div class="column_risk_level">
-                <div class="wrap_Container_Data_overview">
-                  <div class="Risk container_Low">
-                    <div class="risklevel green">
-                      <i class="fa-solid fa-triangle-exclamation"></i>
-                    </div>
-                    <div>
-                      <p class="txt">Low Risk</p>
-                      <div class="container_percentage">
-                        <h1>12</h1>
-                          <p>Areas</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="Risk container_high_risk">
-                    <div class="risklevel yellow">
-                      <i class="fa-solid fa-triangle-exclamation"></i>
-                    </div>
-                    <div>
-                      <p class="txt">Medium Risk</p>
-                      <div class="container_percentage">
-                        <h1>10</h1>
-                        <p>Areas</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="Risk container_critical">
-                    <div class="risklevel red">
-                      <i class="fa-solid fa-triangle-exclamation"></i>
-                    </div>
-                    <div>
-                      <p class="txt">High Risk</p>
-                      <div class="container_percentage">
-                        <h1>4</h1>
-                        <p>Areas</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="camera-view">
+
+            <div class="camera-box">
+                <img src="http://192.168.50.8:5000/video_feed"
+                      alt="IoT Flood Analytics Stream"
+                      class="camera-feed">
             </div>
             
-
-            <!-- Camera -->
-            <div class="main_layout">
-              <!-- LEFT CONTENT -->
-              <div class="left_content">
-                  <!-- CAMERA RECORD -->
-                  <!-- <div class="chart-card">
-                    <h2>Threshold Warning Trend <span>(Last 7 Days)</span></h2> 
-                    <canvas id="riskTrendChart"></canvas>
-                  </div> -->
-                  <div class="container_record">
-                      <div class="Camera_content">
-                          <div>
-                              <h4>Live (Camera)</h4>
-                          </div>
-          
-                          <div class="column">
-          
-                              <!-- CAMERA -->
-                              <div class="live_camera">
-                                <img src="http://192.168.50.8:5000/video_feed"
-                                          alt="Iot Flood Analytics Stream"
-                                          class="camera-feed">
-                              </div>
-          
-                              <!-- RIGHT FORM -->
-                              <div class="row_data">
-          
-                                  <div class="data location_container">
-                                      <h5>Location</h5>
-                                      <div class="location">
-                                          tabuc suba - resident
-                                      </div>
-                                  </div>
-                                  <div class="data description_container">
-                                      <h5>Description (Optional)</h5>
-                                      <div class="description_data">
-                                          <textarea placeholder="Enter Description..."></textarea>
-                                      </div>
-                                  </div>
-                                  <div class="data Tags_container">
-                                      <h5>Tags</h5>
-                                      <div class="high_risk">
-                                          <span class="tags data2">High Risk</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-          
-                  <!-- RECENT RECORDS -->
-                  <div class="container_RecentData">
-                      <div class="recent_data">
-                          <h4>Recent Records</h4>
-          
-                          <table>
-          
-                              <thead>
-                                  <tr>
-                                      <th>ID</th>
-                                      <th>Image</th>
-                                      <th>Location</th>
-                                      <th>Date & Time</th>
-                                      <th>Tags</th>
-                                      <th>Action</th>
-                                  </tr>
-                              </thead>
-          
-                              <tbody>
-                                  <tr>
-                                      <td>IMG-0001</td>
-                                      <td><img src="../imgs/tabuc_suba1.png" class="record-img" /></td>
-                                      <td>Tabuc Suba</td>
-                                      <td>
-                                          05/22/2026
-                                          <p>10:30 AM</p>
-                                      </td>
-                                      <td>High Risk</td>
-                                      <td>
-                                        <div class="wrap_action">
-                                          <div class="action">
-                                            <button class="btn edit" onclick=""><span>edit</span></button>
-                                            <button class="btn view" onclick=""><span class="material-symbols-outlined">download</span></button>
-                                          </div>
-                                        </div>
-                                    </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                  </div>
-              </div>
-          
-              <!-- RIGHT SIDEBAR -->
-              <div class="container_graph">
-          
-                  <!-- WATER LEVEL -->
-                  <div class="WaterLevel_Container">
-                    <h4>Risk Recently Sensor</h4>
-
-                      <div class="chart-wrapper">
-                        <canvas id="pieChart"></canvas>
-
-                          <div class="chart-center">
-                            <p>Total</p>
-                            <h3>100</h3>
-                        </div>
-                      </div>
-                    </div>
-                  <!-- ALERTS -->
-                  <div class="recent_alert_container">
-                    <h4>Recent Alerts</h4>
-
-                    <div class="alert_box">
-                      <div class="icon red">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                      </div>
-                      <h5>High Risk</h5>
-                    </div>
-
-                    <div class="alert_box">
-                      <div class="icon yellow">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                      </div>
-                        <h5>Medium Risk</h5>
-                      </div>
-                    </div>
-                  
-              </div>
+            <div class="location-tag">
+              Tabuc Suba - Resident Area
             </div>
-              <!-- end main -->
+          </div>
+        </div>
+
+        <!-- ALERTS -->
+        <div class="card">
+          <div class="card1">
+           <h3>Current Status</h3>
+           <div class="Risk_Alert">
+            <div class="alert-icon">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="alert-text">
+              <span class="risk">HIGH RISK</span>
+              <span class="message">Flood Detected</span>
+            </div>
+            </div>
+          </div>
+
+          <div class= "card2">
+            <h3>Recent Alerts</h3>
+            <div class="alert high">
+              <div>
+                <span class="risk"> High Risk - Flood Detected</span><br>
+                <span>Tabuc suba street 2  </span>
+              </div>
+
+              <small>10:30 AM</small>
+            </div>
+            <div class="alert medium">
+              <div>
+                <span class="risk"> Medium Risk - Water Reach 50% </span><br>
+                <span>Tabuc Suba Street 1</span>
+              </div>
+              <small>9:15 AM</small>
+            </div>
+            <button class="btn">View All Alerts</button>
           </div>
         </div>
       </section>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="../js/dashboard.js"></script>
-   </main>
+
+ <!-- MIDDLE GRID -->
+<section class="mid-grid">
+
+  <!-- CHART -->
+  <div class="card chart-card">
+    <h3>Threshold Warning Trend (Last 7 Days)</h3>
+
+    <div class="chart-container">
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="card summary">
+    <h3>Today's Summary</h3>
+
+    <div class="summary-box red">
+      <span> High Risk</span>
+      <span>1 Camera</span>
+    </div>
+
+    <div class="summary-box orange">
+      <span> Medium Risk</span>
+      <span>1 Camera</span>
+    </div>
+
+    <div class="summary-box green">
+      <span> Low Risk</span>
+      <span>2 Camera</span>
+    </div>
+  </div>
+
+</section>
+
+      <!-- TABLE -->
+      <section class="card table-card">
+        <h3>Recent Records</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Image</th>
+              <th>Location</th>
+              <th>Date & Time</th>
+              <th>Risk</th>
+              <th>View</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>tabuc_suba-01</td>
+              <td>
+                <img
+                  class="thumb"
+                  src="../imgs/fur.jpg"
+                />
+              </td>
+              <td>Tabuc Suba</td>
+              <td>May 14, 2026<br />10:30 AM</td>
+              <td><span class="tag red">High Risk</span></td>
+              <td>👁</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn">View All Records</button>
+      </section>
+    </main>
+
+    <script>
+      const ctx = document.getElementById("barChart").getContext("2d");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "May 8",
+            "May 9",
+            "May 10",
+            "May 11",
+            "May 12",
+            "May 13",
+            "May 14",
+          ],
+          datasets: [
+            {
+              label: "High Risk",
+              data: [3, 0, 0, 0, 0, 3, 0],
+              backgroundColor: "#ff4d4d",
+            },
+            {
+              label: "Medium Risk",
+              data: [2, 2, 0, 2, 2, 2, 2],
+              backgroundColor: "#f1c40f",
+            },
+            {
+              label: "Low Risk",
+              data: [1, 1, 1, 1, 1, 1, 1],
+              backgroundColor: "#2ecc71",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: "top" },
+          },
+          scales: {
+            y: {
+              min: 0,
+              max: 3,
+              ticks: {
+                stepSize: 1,
+                callback: function(value) {return value + " ft";}
+              }
+            }
+            
+          },
+        },
+      });
+    </script>
   </body>
 </html>
